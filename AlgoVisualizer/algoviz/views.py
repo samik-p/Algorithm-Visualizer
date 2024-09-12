@@ -8,6 +8,8 @@ def index(request):
     <p>This is the algoviz index.</p>
     <ol>
         <li><a href = "array/">Array</a></li>
+        <li><a href = "tree/">Tree</a></li>
+        <li><a href = "graph/">Graph</a></li>
     </ol>
     """
 
@@ -29,6 +31,20 @@ def array(request):
         <li><a href = "insert_sort/">Insert Sort</a></li>
         <li><a href = "bucket_sort/">Bucket Sort</a> </li>
     </ol>
+    """
+    return HttpResponse(response)
+
+def tree(request):
+    response = """
+    <p>This is the landing page for tree data structure.</p>
+   
+    """
+    return HttpResponse(response)
+
+def graph(request):
+    response = """
+    <p>This is the landing page for graph data structure.</p>
+   
     """
     return HttpResponse(response)
 

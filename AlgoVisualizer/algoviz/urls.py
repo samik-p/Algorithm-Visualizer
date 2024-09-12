@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("<int:algo_id>/", views.array_viz, name="array_viz"),
+    path("array/", views.array, name="array"),
+    path("array/binary_search/", views.array_binary_search, name="array_binary_search"),
 ]

@@ -4,9 +4,20 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("This is the algoviz index")
+    response = """
+    <p>This is the algoviz index.</p>
+    <ol>
+        <li><a href="array/">Array</a></li>
+    </ol>
+    """
+
+    return HttpResponse(response)
 
 
-def array_viz(request, algo_id):
-    response = f"You're looking at the array visualization for algo id {algo_id}"
+def array(request):
+    return HttpResponse("This is the landing page for array data structure")
+
+
+def array_binary_search(request):
+    response = f"This is the page for binary search for arrays."
     return HttpResponse(response)

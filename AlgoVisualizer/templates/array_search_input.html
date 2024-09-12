@@ -1,0 +1,27 @@
+<!-- <form method="post">
+    {% csrf_token %}    
+    <label for="in_data">Array Data: </label>
+    <input id="in_data" type="text" name="in_data" required>
+    <label for="target">Target Element: </label>
+    <input id="target" type="number" name="target" required>
+
+    <input type="submit" value="Run">
+</form> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Algorithm Visualizer</title>
+</head>
+
+<body>
+    <h1>Enter Data for Visualization</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

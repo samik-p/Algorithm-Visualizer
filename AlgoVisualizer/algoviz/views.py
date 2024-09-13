@@ -67,9 +67,13 @@ def array_linear_search(request):
 
             arr = [int(x.strip()) for x in data.split(",")]
 
-            print(arr)
+            context = {
+                "data_structure": "array",
+                "data_list": arr,
+                "target": target,
+            }
 
-            return HttpResponse("OK")
+            return render(request, "visualization.html", context)
         else:
             return HttpResponse("INVALID")
     else:

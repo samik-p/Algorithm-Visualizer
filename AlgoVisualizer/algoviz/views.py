@@ -66,11 +66,24 @@ def array_linear_search(request):
             target = form.cleaned_data["target"]
 
             arr = [int(x.strip()) for x in data.split(",")]
+            tar = int(target)
+            mon = -1
+            ron = "target is not in the list"
+            arr2 = []
+            for x in range (0, len(arr)):
+                arr2.append(arr[x] == tar)
+                if arr[x] == tar:
+                    mon = x
+                    ron = "target is in the list"
+                    
 
             context = {
                 "data_structure": "array",
                 "data_list": arr,
                 "target": target,
+                "result_array": arr2,
+                "index_of_target": mon,
+                "status_of_target": ron
             }
 
             return render(request, "visualization.html", context)
